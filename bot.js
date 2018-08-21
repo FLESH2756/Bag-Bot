@@ -1,16 +1,17 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Discord = require("discord.js");
+const Client = new Discord.Client();
 const prefix = ".";
 
-client.on('ready', () => {
+Client.on('ready', ()=>{
     console.log('I am ready!');
-    client.user.setPresence({ game: { name: `The bot is developing! | .help`, type: 1 } }).catch();
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-        message.reply('pong');
+Client.on("message", (message)=>{
+    if(!message.content.startsWith(prefix)) return;
+
+    if(message.content.startsWith(prefix + "user-info")){
+        message.channel.send("I don't user's info!")
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+Client.login(process.env.BOT_TOKEN);

@@ -4,6 +4,7 @@ const prefix = ".";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.setGame('The bot is developing!')
 });
 
 client.on('message', message => {

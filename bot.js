@@ -4,6 +4,7 @@ const prefix = ".";
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setPresence({ game: { name: `The bot is developing! | .help`, type: 1 } }).catch();
 });
 
 client.on('message', message => {

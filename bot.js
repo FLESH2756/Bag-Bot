@@ -4,6 +4,8 @@ const prefix = ".";
 
 Client.on('ready', ()=>{
     console.log('I am ready!');
+    bot.user.setActivity("Developing", {type: "PLAYING"})
+    bot.user.setStatus("dmd");
 });
 
 Client.on("message", (message)=>{

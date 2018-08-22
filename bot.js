@@ -3,7 +3,7 @@ const Client = new Discord.Client();
 const prefix = ".";
 
 Client.on('ready', ()=>{
-    console.log('I am ready!');
+    console.log('Bot is ready!');
     bot.user.setActivity("Developing", {type: "PLAYING"})
     bot.user.setStatus("dmd");
 });
